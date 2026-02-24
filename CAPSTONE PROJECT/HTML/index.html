@@ -1,0 +1,63 @@
+<!-- Create an web page for user to take and complete order-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chef's Kitchen</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Chef's Kitchen</h1>
+    <nav>
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#personalised-meal">Meal</a></li>
+        <li><a href="#incomplete-order-list-section">Incomplete Order List</a></li>
+      </ul>
+    </nav>
+  </header>
+  <hr>
+
+  <!-- Ingredient Choose Section -->
+  <section id="menu">
+    <h2>Generate Your Personalised Menu</h2>
+    <!-- Ask user to add their main ingredient -->
+    <label for="main-ingredient">Enter your main ingredient:</label>
+    <!-- Provide a save button -->
+    <input type="text" id="main-ingredient" name="main-ingredient" required placeholder="e.g., Beef, Pork, Chicken...">
+    <button type="button" id="save-ingredient">Save</button>
+  </section>
+  <hr>
+
+  <!-- Personalised Order Section -->
+  <section id="personalised-meal">
+    <h2>Your Personalised Order</h2>
+    <p> Feel free to check your order details below:</p>
+    <p id="order-detail"></p>
+    <p> If you are not satisfied with your order, feel free to try again with the same ingredient!</p>
+  </section>
+  <hr>
+
+  <!-- Order List Section -->
+  <section id="incomplete-order-list-section">
+    <h2>Incomplete Order List</h2>
+    <ul id="incomplete-order-list"></ul>
+
+    <!-- Confirm Order Section-->
+    <section id="confirm-order">
+      <h2>Confirm Your Order</h2>
+      <p> Once you are satisfied with your order, please type the order ID to confirm your order. If you don't want to complete the order, enter 0 </p>
+      <label for="confirm-order-id">Enter Order ID:</label>
+      <input type="text" id="confirm-order-id" name="confirm-order-id" required placeholder="e.g., 1, 2, 3...">
+      <button type="button" id="confirm-order-button">Confirm Order</button>
+    </section>
+
+
+    <script src="../JS/index.js"></script>
+</body>
+
+</html>
